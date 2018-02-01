@@ -95,27 +95,27 @@ Using C to write this program was very difficult. Memory leaks were not fun to d
 ### Example
 Lets see this program in action. I used a txt file containing the script from Romeo and Juliet to use as an example. Here I'm showing the head and tail of the file(first and last ten lines).
 
-![text](/images/text.jpg)
+![text](./images/text.jpg)
 
 Here you can see the size of the text file, as you can see it is 144138 bytes
 
-![size](/images/size.jpg)
+![size](./images/size.jpg)
 
 Next I encode the file and put the output in a file I named output. When I check the size of the file, it's 87822 bytes, a whole 56,316 less!! About 60% smaller! 
 
-![encoded size](/images/encodedsize.jpg)
+![encoded size](./images/encodedsize.jpg)
 
 Viewing the contents of output, we can see that our file has been encoded. You can sort of make out the beginning which is the magic number and the code to reconstruct the tree which has I's and L's followed by each symbol used. The rest is impossible for any human to comprehend, it is the series of bits the encoder will read to reconstruct the text.
 
-![encoded text](/images/encodedtext.jpg)
+![encoded text](./images/encodedtext.jpg)
 
 The encoded file is clearly unreadable to any human, so we must use our decoder to bring the file back to its original state. I use decode to take in the encoded file and decode it, putting it's output in a file called original. When the file is decoded, it is identical to the file before it was encoded. As we see here it's back to 144138 bytes.
 
-![decoded size](/images/decodedsize.jpg)
+![decoded size](./images/decodedsize.jpg)
 
 Just to show that the text is exactly the same as it was before, here's the output of head and tail run on the decoded file.
 
-![decoded text](/images/decodedtext.jpg)
+![decoded text](./images/decodedtext.jpg)
 
 There you have it, an encoder and decoder written in C using Huffman Coding!
 
